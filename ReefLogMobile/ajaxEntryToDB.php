@@ -1,0 +1,15 @@
+<?php
+require_once "config.php";
+$croppedImage = $_POST['croppedImage'];
+$thumbnail = $_POST['thumbnail'];
+$type = $_POST['type'];
+session_start();
+$userId = $_SESSION['id'];
+$year = date("Y");
+$month = date("m");
+$day = date("d");
+$time = date("G:i");
+
+$query = "INSERT INTO `entry` (`userId`, coralId, `year`, `month`, `day`, `time`, `avatar`, `avatarThumbnail`) VALUES ('" .$userId. "', '" .$type. "', '" .$year. "', '" .$month. "', '" .$day. "', '" .$time. "', '" .$croppedImage. "', '" .$thumbnail. "')";
+$results = mysqli_query($connect, $query);
+

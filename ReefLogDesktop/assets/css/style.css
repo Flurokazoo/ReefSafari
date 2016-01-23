@@ -1,0 +1,230 @@
+body {
+    background-color: #4d77aa;
+    overflow: scroll;
+}
+
+.header-section a:hover, #reeflog-logo a:hover {
+    text-decoration: none;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.name {
+    margin-top: 0
+}
+
+.yellow-text {
+    color: #ffd966
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+#settings-box, #logout-box, .header-section a {
+    font-size: 20px;
+    color: #ffd966;
+}
+
+.settings-box-glyphicon, .glyphicon-log-out {
+    margin-left: 5px;
+}
+
+#reeflog-logo {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#reeflog-logo h1 {
+    font-size: 60px;
+}
+
+#content-container {
+    padding-top: 15px;
+}
+
+#login-container {
+    margin-top: 200px;
+}
+
+.border {
+    border-radius: 20px;
+}
+
+.search {
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+.login {
+    width: 250px;
+    margin-left: 25%;
+    margin-top: 25px;
+}
+
+.updated {
+    width: 50%;
+    margin: 20px 25%;
+}
+
+/*------------------------------------------------------------REEFLOG---------------------------------------------------------------------------------*/
+nav {
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.yearDiv {
+
+}
+
+.yearDiv h2 {
+    background-color: #253f5f;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    padding: 5px 10px;
+    overflow: auto;
+}
+
+.dayDiv {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.dayDiv h3 {
+    padding-left: 28px;
+}
+
+.entryDiv {
+    background-color: #253f5f;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 30%;
+    height: 255px;
+    margin: 10px 1.66667%;
+    float: left;
+}
+
+.entryDiv img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.entryDiv button {
+    width: 150px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.modal-dialog {
+    width: 1200px;
+
+}
+
+.modal-content {
+    background-color: #4d77aa;
+    border-radius: 25px;
+}
+
+.modal-footer, .modal-header {
+    border: none;
+}
+
+.modalImg {
+    display: block;
+    height: 500px;
+    width: 500px;
+}
+
+#reefName {
+    width: 500px;
+    height: 100px;
+    margin-top: 0;
+    background-color: #253f5f;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 36px;
+    line-height: 2.5;
+}
+
+.modalDescription {
+    height: 600px;
+    width: 45%;
+    margin-left: 3.2%;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.modalImg, #reefName {
+    margin: 0 auto;
+}
+
+#fixed-nav {
+    position: fixed;
+    width: 450px;
+}
+
+#fixed-search {
+    margin-top: 40px;
+}
+
+#search-date-list a {
+    color: #000000;
+    font-size: 26px;
+}
+
+#search-date-list, .yearUl {
+    padding: 10px;
+}
+
+.yearLi {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.monthLi {
+    padding-left: 40px;
+    list-style-type: none;
+}
+
+#searchBox {
+    padding: 20px;
+}
+
+#searchBox label {
+    font-size: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+#modalDescriptionEdit, #modalCoralUserDescription {
+    height: 400px;
+    width: 100%;
+}
+
+.modal-button {
+    width: 100%;
+    margin: 10px auto;
+}
+
+
+
+
+

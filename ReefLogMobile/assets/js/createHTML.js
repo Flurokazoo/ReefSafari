@@ -29,8 +29,8 @@ function createEntryHTML(data) {
     var entryButton = document.createElement('button');
     entryButton.href = "index.php";
     entryButton.className = "entryButton";
-    $(entryButton).attr('data-toggle', 'modal');
-    $(entryButton).attr('data-target', '#detailsModal');
+    //$(entryButton).attr('data-toggle', 'modal');
+    //$(entryButton).attr('data-target', '#detailsModal');
     $(entryButton).attr("data-entryid", data.id);
     entryButton.innerHTML = "View";
 

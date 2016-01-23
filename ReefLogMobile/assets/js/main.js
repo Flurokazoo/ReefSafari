@@ -97,6 +97,8 @@ function showModel(coralEntry) {
     $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
     $("#modalCoralRarity").text(rarityNames[coralEntry[0].rarity - 1]);
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
+    $('#detailsModal').modal("show");
+
 }
 function toggleModalEdit() {
     $("#modalCoralUserDescription").toggle();

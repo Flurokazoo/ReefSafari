@@ -22,7 +22,7 @@
 </div>
 <div class="container-dp">
     <h1 class="h1-dp">Koffiepot</h1>
-    <?php //if(venemous == 1){?>
+    <?php //if(venomous == 1){?>
         <span class="venomous-dp">Venomous af</span>
     <?php //} ?>
     <span class="span-dp">Rarity:</span>

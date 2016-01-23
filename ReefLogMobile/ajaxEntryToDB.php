@@ -13,3 +13,5 @@ $time = date("G:i");
 $query = "INSERT INTO `entry` (`userId`, coralId, `year`, `month`, `day`, `time`, `avatar`, `avatarThumbnail`) VALUES ('" .$userId. "', '" .$type. "', '" .$year. "', '" .$month. "', '" .$day. "', '" .$time. "', '" .$croppedImage. "', '" .$thumbnail. "')";
 $results = mysqli_query($connect, $query);
 
+echo mysqli_insert_id($connect);
+

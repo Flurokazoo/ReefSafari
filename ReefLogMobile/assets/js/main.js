@@ -124,8 +124,6 @@ function saveEntry() {
         success: function () {
         }
     });
-
-
     toggleModalEdit();
 }
 function deleteEntry() {
@@ -304,10 +302,10 @@ function saveEntryToDB(img, type){
             type: type
         },
         success: function(response){
-            console.log(response);
+            window.location.href = "detailpage.php?id="+response;
         }
-
     });
+
 }
 function getCroppedImage(img){
     var saveCanvas = document.createElement('canvas');

@@ -6,7 +6,7 @@ isLoggedIn();
 
 $id = $_GET['id'];
 
-$query = "SELECT `avatar`, `name`, `venomous`, `rarity`, `entry`.id INNER JOIN `coral` ON `entry`.coralId =`coral`.id FROM entry WHERE id = '".$id."'";
+$query = "SELECT `avatar`, `name`, `venomous`, `rarity`, `entry`.id FROM `coral` INNER JOIN `entry` ON `entry`.coralId =`coral`.id WHERE `entry`.id = '".$id."' ";
 $results = mysqli_query($connect, $query);
 
 

@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_assoc($coralTypeResults)) {
     <span class="span-dp"></span>
     <strong class="strong-dp"></strong>
 
-    <form action="setStatus.php">
+    <form method="post" action="setStatus.php">
         <input name="setType" type="hidden" value="save">
         <input name="id" type="hidden" value="<?= $id ?>">
         <input type="submit" value="Save to ReefLog" class="a-dp btn btn-success">
@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_assoc($coralTypeResults)) {
 
                         <div>
                             <?php foreach ($resultArray as $entry) { ?>
-                                <form action="setStatus.php">
+                                <form method="post" action="setStatus.php">
                                     <input name="setType" type="hidden" value="update">
                                     <input name="id" type="hidden" value="<?= $id ?>">
                                     <input name="coralType" type="hidden" value="<?= $entry['id'] ?>">

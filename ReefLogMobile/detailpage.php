@@ -29,9 +29,11 @@ $results = mysqli_query($connect, $query);
     <h1 class="h1-dp"><?= $row['name'] ?></h1>
     <?php if($row['venomous'] == 1){?>
         <span class="venomous-dp">Venomous</span>
-    <?php } else if ($row['venomous'] > 1) { ?>
-        <span class="venomous-dp">Very Venomous</span>
-    <?php } ;?>
+    <?php } else if ($row['venomous'] == 2) { ?>
+        <span class="very-venomous-dp">Very Venomous</span>
+    <?php } else {?>
+        <span class="not-venomous-dp">Not Venomous</span>
+    <?php } ; ?>
     <span class="span-dp">Rarity:</span>
     <strong class="strong-dp"><?= $row['rarity']; }?></strong>
     <span class="span-dp"></span>

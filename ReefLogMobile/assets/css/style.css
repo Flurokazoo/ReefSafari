@@ -116,6 +116,10 @@ nav {
 
 .dayDiv h3 {
     padding-left: 28px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    paading-bottom: 5px
 }
 
 .entryDiv {
@@ -268,7 +272,29 @@ textarea {
     padding: 0;
 }
 
+.not-venomous-dp {
+    background-color: #8ad01a;
+    color: white;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
 .venomous-dp {
+    background-color: #e8b22a;
+    color: white;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.very-venomous-dp {
     background-color: #d00a25;
     color: white;
     font-size: 35px;

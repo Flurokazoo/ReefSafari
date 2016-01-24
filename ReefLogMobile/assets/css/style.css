@@ -158,7 +158,18 @@ nav {
     color: #FFFFFF;
     border: none;
 }
-
+/*DIT IS ALLEEN VOOR REVIEW PAGE \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/*/
+.entryReviewButton{
+    width: 20%;
+    height: 230px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+    background-color: #ffd966;
+    color: #FFFFFF;
+    border: none;
+}
+/*ALLEEN REVIEW PAGE ^^^^^^^^^^^^^^^^*/
 .entryDiv h4 {
     display: block;
     font-size: 4.5em;

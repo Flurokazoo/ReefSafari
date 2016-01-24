@@ -28,12 +28,12 @@ var checkableColors = [
 ];
 
 function init() {
-    $("#reviewNow").on("click", function(){
-        $('#reviewModal').modal("show");
-    });
-    $('#search-input').bind('input', searchEntries);
-    getAllEntries();
-    getFileFromCamera();
+    //$("#reviewNow").on("click", function(){
+    //    $('#reviewModal').modal("show");
+    //});
+    //$('#search-input').bind('input', searchEntries);
+    //getAllEntries();
+    //getFileFromCamera();
 }
 function getEntries(data) {
     allEntries = data;
@@ -68,6 +68,27 @@ function getAllEntries() {
         data: {action: "getEntries"},
         success: getEntries
     });
+}
+function getReviewItems(){
+    $.ajax({
+        dataType: "json",
+        url: 'ajax.php',
+        data: {action: "getReviewEntries"},
+        success: getReviewItemsCallback
+    });
+}
+function getReviewItemsCallback(data){
+    allEntries = data;
+    deleteCurrentHTML();
+    createReviewPageHTML();
+    $('.collapse-arrow').on('click', hideShow);
+
+    //$('.entryButton').on('click', getEntryData);
+    //$('#editButton').on('click', editEntryDescription);
+    //$('#saveButton').on('click', saveEntry).hide();
+    //$('#deleteButton').on('click', deleteEntry);
+    //$('#detailsModal').on('hidden.bs.modal', resetModal);
+    //$("#modalDescriptionEdit").hide();
 }
 function searchEntries() {
     var data = $("#search-input").val();

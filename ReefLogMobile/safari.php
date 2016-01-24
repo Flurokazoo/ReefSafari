@@ -28,3 +28,4 @@
 </div>
 
 <?php include_once "footer.php"?>
+<script src="assets/js/safari.js"></script>

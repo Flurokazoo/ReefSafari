@@ -1,6 +1,20 @@
 <?php
 require_once "header.php";
 isLoggedIn();
+$query = "SELECT status FROM `entry` WHERE `userid`=" . $_SESSION['id'] . " AND `status`=0";
+$results = mysqli_query($connect, $query);
+echo $query;
+$resultArray = [];
+while ($row = mysqli_fetch_assoc($results)) {
+    $resultArray[] = $row;
+}
+
+if (count($resultArray) > 0) {
+    $showReview = true;
+} else {
+    $showReview = false;
+}
+
 ?>
 
 <!doctype html>
@@ -23,6 +37,9 @@ isLoggedIn();
 <section class="body-section">
     <a href="safari.php" class="btn btn-success login border">Go on a Safari</a>
     <a href="reeflog.php" class="btn btn-success login border">View ReefLog</a>
+    <?php if ($showReview) { ?>
+        <a href="review.php" class="btn btn-success login border">View Revlog</a>
+    <?php } ?>
 </section>
 
-<?php require_once "footer.php"?>
+<?php require_once "footer.php" ?>

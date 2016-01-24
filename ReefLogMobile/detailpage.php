@@ -87,6 +87,6 @@ while ($row = mysqli_fetch_assoc($coralTypeResults)) {
     </div>
 </div>
 
-    <script src="assets/js/details.js"></script>
 
 <?php include_once "footer.php" ?>
+<script src="assets/js/detailpage.js"></script>

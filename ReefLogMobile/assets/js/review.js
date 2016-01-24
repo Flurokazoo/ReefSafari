@@ -1,0 +1,5 @@
+$(review);
+
+function review(){
+    getReviewItems();
+}

@@ -74,3 +74,4 @@ isLoggedIn();
 
 
 <?php require_once "footer.php"; ?>
+<script src="assets/js/reeflog.js"></script>

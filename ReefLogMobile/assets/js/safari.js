@@ -1,0 +1,5 @@
+$(safari);
+
+function safari(){
+    getFileFromCamera();
+}

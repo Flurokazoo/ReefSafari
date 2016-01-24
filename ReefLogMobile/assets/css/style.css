@@ -362,6 +362,16 @@ textarea {
     text-align: center;
 }
 
+#reviewModal {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.coralbtn {
+    width: 90%;
+    height: 20px;
+    font-size: 16px;
+}
 
 
 

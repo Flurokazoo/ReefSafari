@@ -28,6 +28,9 @@ var checkableColors = [
 ];
 
 function init() {
+    $("#reviewNow").on("click", function(){
+        $('#reviewModal').modal("show");
+    });
     $('#search-input').bind('input', searchEntries);
     getAllEntries();
     getFileFromCamera();

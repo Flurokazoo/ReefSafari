@@ -5,47 +5,88 @@ isLoggedIn();
 
 $id = $_GET['id'];
 
-$query = "SELECT `avatar`, `name`, `venomous`, `rarity`, `entry`.id FROM `coral` INNER JOIN `entry` ON `entry`.coralId =`coral`.id WHERE `entry`.id = '".$id."' ";
+$query = "SELECT `avatar`, `name`, `venomous`, `rarity`, `entry`.id FROM `coral` INNER JOIN `entry` ON `entry`.coralId =`coral`.id WHERE `entry`.id = '" . $id . "' ";
 $results = mysqli_query($connect, $query);
-
-
+$coralTypeQuery = "SELECT `name`, `id` FROM `coral`";
+$coralTypeResults = mysqli_query($connect, $coralTypeQuery);
+$resultArray = [];
+while ($row = mysqli_fetch_assoc($coralTypeResults)) {
+    $resultArray[] = $row;
+}
 
 ?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500italic,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>ReefLog</title>
-</head>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:500italic,500' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>ReefLog</title>
+    </head>
 <body>
-<?php while ($row = mysqli_fetch_assoc($results)) {?>
-<div class="container-dp">
-    <img class="img-dp" src="<?php echo $row['avatar']; ?>">
+<?php while ($row = mysqli_fetch_assoc($results)) { ?>
+    <div class="container-dp">
+        <img class="img-dp" src="<?php echo $row['avatar']; ?>">
 
-</div>
+    </div>
 <div class="container-dp">
     <h1 class="h1-dp"><?= $row['name'] ?></h1>
-    <?php if($row['venomous'] == 1){?>
+    <?php if ($row['venomous'] == 1) { ?>
         <span class="venomous-dp">Venomous</span>
     <?php } else if ($row['venomous'] == 2) { ?>
         <span class="very-venomous-dp">Very Venomous</span>
-    <?php } else {?>
+    <?php } else { ?>
         <span class="not-venomous-dp">Not Venomous</span>
-    <?php } ; ?>
+    <?php }; ?>
     <span class="span-dp">Rarity:</span>
-    <strong class="strong-dp"><?= $row['rarity']; }?></strong>
+    <strong class="strong-dp"><?= $row['rarity'];
+} ?></strong>
     <span class="span-dp"></span>
     <strong class="strong-dp"></strong>
 
-
-    <a class="a-dp btn btn-success">Save to <span>ReefLog</span></a>
+    <form action="setStatus.php">
+        <input name="setType" type="hidden" value="save">
+        <input name="id" type="hidden" value="<?= $id ?>">
+        <input type="submit" value="Save to ReefLog" class="a-dp btn btn-success">
+    </form>
 
     <span class="white-text wrong-coral">Is this coral tagged wrongly?</span>
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default btn-warning review-button">Review Now</button>
-        <button type="button" class="btn btn-default btn-danger review-button">Review Later</button>
+        <button id="reviewNow" type="button" class="btn btn-default btn-warning review-button">Review Now</button>
+        <button id="reviewLater" type="button" class="btn btn-default btn-danger review-button">Review Later</button>
     </div>
 
-    <?php include_once "footer.php"?>
+    <div id="reviewModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Select coral:</h4>
+
+                    <div class="modal-body">
+
+                        <div class="btn-group-vertical" role="group" aria-label="...">
+                            <?php foreach ($resultArray as $entry) { ?>
+                                <form action="setStatus.php">
+                                    <input name="setType" type="hidden" value="update">
+                                    <input name="id" type="hidden" value="<?= $id ?>">
+                                    <input name="coralType" type="hidden" value="<?= $entry['id'] ?>">
+                                    <input name="submit" type="submit" value="<?= $entry['name'] ?>"
+                                           class="btn btn-default coralbtn">
+                                </form>
+                            <?php } ?>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/details.js"></script>
+
+<?php include_once "footer.php" ?>

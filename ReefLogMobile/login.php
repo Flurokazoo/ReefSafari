@@ -2,6 +2,9 @@
 require_once "config.php";
 session_start();
 
+if(isset($_SESSION['id'])){
+    header("Location: choose.php");
+}
 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];

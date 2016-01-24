@@ -1,6 +1,5 @@
 <?php
 require_once "config.php";
-include_once "footer.php";
 session_start();
 isLoggedIn();
 
@@ -23,20 +22,28 @@ $results = mysqli_query($connect, $query);
 <body>
 <?php while ($row = mysqli_fetch_assoc($results)) {?>
 <div class="container-dp">
-    <img class="img-dp" src="<?php echo $row['avatar']; }?>">
-    <a class="a-dp btn btn-warning">ples later reviw</a>
-    <a class="a-dp btn btn-success">Save to <span>ReefLog</span></a>
+    <img class="img-dp" src="<?php echo $row['avatar']; ?>">
+
 </div>
 <div class="container-dp">
-    <h1 class="h1-dp">Koffiepot</h1>
-    <?php //if(venomous == 1){?>
-        <span class="venomous-dp">Venomous af</span>
-    <?php //} ?>
+    <h1 class="h1-dp"><?= $row['name'] ?></h1>
+    <?php if($row['venomous'] == 1){?>
+        <span class="venomous-dp">Venomous</span>
+    <?php } else if ($row['venomous'] > 1) { ?>
+        <span class="venomous-dp">Very Venomous</span>
+    <?php } ;?>
     <span class="span-dp">Rarity:</span>
+    <strong class="strong-dp"><?= $row['rarity']; }?></strong>
+    <span class="span-dp"></span>
     <strong class="strong-dp"></strong>
-    <span class="span-dp">Habitat:</span>
-    <strong class="strong-dp">je moedert</strong>
 
 
+    <a class="a-dp btn btn-success">Save to <span>ReefLog</span></a>
+
+    <span class="white-text wrong-coral">Is this coral tagged wrongly?</span>
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-warning review-button">Review Now</button>
+        <button type="button" class="btn btn-default btn-danger review-button">Review Later</button>
+    </div>
 
     <?php include_once "footer.php"?>

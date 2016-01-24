@@ -8,12 +8,13 @@ body {
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
 }
 
 .container {
     margin-top: 50px;
+    width: 100%;
 }
 
 .name {
@@ -34,7 +35,7 @@ body {
 }
 
 #settings-box, #logout-box, .header-section a {
-    font-size: 22px;
+    font-size: 25px;
     color: #ffd966;
 }
 
@@ -66,7 +67,7 @@ body {
     border-radius: 20px;
 }
 
-.login-section{
+.login-section {
     margin-top: 100px;
 }
 
@@ -121,16 +122,16 @@ nav {
     background-color: #FFFFFF;
     color: #000000;
     border-radius: 10px;
-    height: 200px;
+    height: 230px;
     margin: 10px;
     float: left;
     padding: 0;
 }
 
 .entryDiv img {
-    height: 200px;
+    height: 230px;
     margin-bottom: 10px;
-    width: 30%;
+    width: 29%;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     float: left;
@@ -138,20 +139,21 @@ nav {
 
 .entryDiv button {
     width: 20%;
-    height: 200px;
+    height: 230px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 18px;
     background-color: #229f58;
     color: #FFFFFF;
-    border:  none;
+    border: none;
 }
-.entryDiv h4{
+
+.entryDiv h4 {
     display: block;
-    font-size: 2.5em;
+    font-size: 4.5em;
     background-color: #253f5f;
     color: #FFFFFF;
-    width: 50%;
+    width: 51%;
     float: left;
     margin: 0;
     padding: 10px 0 10px 20px;
@@ -229,6 +231,7 @@ nav {
 textarea {
     resize: none;
 }
+
 #modalDescriptionEdit, #modalCoralUserDescription {
     height: 250px;
     width: 100%;
@@ -239,14 +242,16 @@ textarea {
     margin: 5px auto;
     font-size: 20px;
 }
+
 /*--------------------------------------------------------DETAIL PAGE------------------------------------------------------*/
 
-.img-dp{
+.img-dp {
     width: 100%;
     display: block;
     margin: 0 auto;
 }
-.h1-dp{
+
+.h1-dp {
     display: block;
     font-size: 50px;
     border-top-left-radius: 10px;
@@ -262,7 +267,8 @@ textarea {
     margin: 0;
     padding: 0;
 }
-.venomous-dp{
+
+.venomous-dp {
     background-color: #d00a25;
     color: white;
     font-size: 35px;
@@ -272,7 +278,8 @@ textarea {
     float: left;
     text-align: center;
 }
-.span-dp{
+
+.span-dp {
     color: #b9b3bb;
     border-bottom: 1px solid black;
     background-color: white;
@@ -284,7 +291,8 @@ textarea {
     float: left;
     padding-left: 20px;
 }
-.strong-dp{
+
+.strong-dp {
     color: black;
     float: left;
     width: 50%;
@@ -295,18 +303,37 @@ textarea {
     border-bottom: 1px solid black;
     background-color: white;
 }
-.container-dp{
+
+.container-dp {
     float: left;
     width: 40%;
     margin: 2.5% 5% 0 5%;
     border-radius: 10px;
     background-color: #4d77aa;
 }
-.a-dp{
-    font-size: 20px;
+
+.a-dp {
+    font-size: 40px;
     margin: 10px auto;
-    display: block;
     width: 100%;
+    height: 70px;
+}
+
+.review-button {
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.btn-group{
+    width: 100%;
+}
+
+.wrong-coral{
+    font-size: 25px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
 }
 
 

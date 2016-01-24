@@ -309,8 +309,8 @@ function saveEntryToDB(img, type){
 }
 function getCroppedImage(img){
     var saveCanvas = document.createElement('canvas');
-    saveCanvas.width = 1000;
-    saveCanvas.height = 1000;
+    saveCanvas.width = 700;
+    saveCanvas.height = 700;
 
 
     if(img.width > img.height){

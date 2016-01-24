@@ -1,10 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Niek
- * Date: 18-1-2016
- * Time: 20:38
- */
+require_once "config.php";
+include_once "footer.php";
+session_start();
+isLoggedIn();
+
+$id = $_GET['id'];
+
+$query = "SELECT avatar FROM entry WHERE id = '".$id."'";
+$results = mysqli_query($connect, $query);
+
+
+
 ?>
 <html lang="en">
 <head>
@@ -15,9 +21,10 @@
     <title>ReefLog</title>
 </head>
 <body>
+<?php while ($row = mysqli_fetch_assoc($results)) {?>
 <div class="container-dp">
-    <img class="img-dp" src="assets/img/koffiepot.jpg">
-    <a class="a-dp btn btn-warning">Strong stufferino, ples later reviw</a>
+    <img class="img-dp" src="<?php echo $row['avatar']; }?>">
+    <a class="a-dp btn btn-warning">ples later reviw</a>
     <a class="a-dp btn btn-success">Save to <span>ReefLog</span></a>
 </div>
 <div class="container-dp">
@@ -26,10 +33,10 @@
         <span class="venomous-dp">Venomous af</span>
     <?php //} ?>
     <span class="span-dp">Rarity:</span>
-    <strong class="strong-dp">heel raar</strong>
+    <strong class="strong-dp"></strong>
     <span class="span-dp">Habitat:</span>
     <strong class="strong-dp">je moedert</strong>
-</div>
 
-</body>
-</html>
+
+
+    <?php include_once "footer.php"?>

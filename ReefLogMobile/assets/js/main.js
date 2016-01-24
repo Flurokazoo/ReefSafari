@@ -383,3 +383,4 @@ function checkColor(color) {
 function appendResult(result) {
     $("#result").empty().append($( "<h2>" + result + "</h2>"));
 }
+

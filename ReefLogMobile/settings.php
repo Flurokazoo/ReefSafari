@@ -37,7 +37,7 @@ if (isset($_GET['update'])) {
 <section class="body-section">
     <div id="fixed-nav" class="col-lg-4">
         <div id="reeflog-logo" class="col-lg-6">
-            <a href="reeflog.php.php"><h1><span class="yellow-text">Reef</span><span
+            <a href="reeflog.php"><h1><span class="yellow-text">Reef</span><span
                         class="white-text italic-text">Log</span></h1></a>
         </div>
     </div>

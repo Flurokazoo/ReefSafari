@@ -7,7 +7,8 @@
         <p>Neem een foto</p>
 
         <p>
-            <input type="file" id="take-picture" accept="image/*">
+            <input type="file" id="take-picture" accept="image/*" class="btn btn-success login border" placeholder="Upload/Take a picture">
+            <label for="take-picture" class="btn btn-success login border">Upload/Take a Picture </label>
         </p>
 
         <h2>Preview:</h2>

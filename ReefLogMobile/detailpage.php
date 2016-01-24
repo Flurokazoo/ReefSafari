@@ -63,18 +63,18 @@ while ($row = mysqli_fetch_assoc($coralTypeResults)) {
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Select coral:</h4>
+                    <h4 class="modal-title white-text">Select the right coral:</h4>
 
                     <div class="modal-body">
 
-                        <div class="btn-group-vertical" role="group" aria-label="...">
+                        <div>
                             <?php foreach ($resultArray as $entry) { ?>
                                 <form action="setStatus.php">
                                     <input name="setType" type="hidden" value="update">
                                     <input name="id" type="hidden" value="<?= $id ?>">
                                     <input name="coralType" type="hidden" value="<?= $entry['id'] ?>">
                                     <input name="submit" type="submit" value="<?= $entry['name'] ?>"
-                                           class="btn btn-default coralbtn">
+                                           class="btn btn-success coralbtn">
                                 </form>
                             <?php } ?>
 

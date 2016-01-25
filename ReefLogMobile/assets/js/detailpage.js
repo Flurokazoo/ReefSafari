@@ -5,6 +5,6 @@ function detailpage(){
         $('#reviewModal').modal("show");
     });
     $("#reviewLater").on("click", function(){
-        window.location.href = "review.php";
+        window.location.href = "choose.php";
     });
 }

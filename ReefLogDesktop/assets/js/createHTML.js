@@ -102,6 +102,7 @@ function createPageHTML() {
     for (var i = d.getFullYear(); i > 2013; i--) {
         document.getElementById("content-container").appendChild(createYearHTML(i));
     }
+
 }
 function createMonthAnchorDiv(month, year){
     var anchorDiv = document.createElement('div');

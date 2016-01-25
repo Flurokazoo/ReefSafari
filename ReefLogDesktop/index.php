@@ -28,7 +28,7 @@ isLoggedIn();
 
                         <h3>Rarity</h3>
 
-                        <p id="modalCoralRarity">
+                        <div id="modalCoralRarity"></div>
 
                         <h3>Venomous</h3>
 

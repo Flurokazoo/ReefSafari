@@ -88,7 +88,7 @@ function showModel(coralEntry) {
     $("#modalCoralInformation").text(coralEntry[0].coralDescription);
     $("#modalCoralUserDescription").text(coralEntry[0].description);
     $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
-    $("#modalCoralRarity").text(rarityNames[coralEntry[0].rarity - 1]);
+    $("#modalCoralRarity").html(createRating(coralEntry[0].rarity - 1, 10, "ratingDivContainer"));
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
 }
 function toggleModalEdit() {
@@ -182,4 +182,22 @@ function updateNav() {
         yearA.text(i + "(" + yearAmount + ")");
         navList.append(yearUl);
     }
+}
+function createRating(given, max, className){
+    var rating = document.createElement('div');
+    rating.className = className;
+
+    for(var i = 0; i < max; i ++){
+        if(i <= given){
+            var img = document.createElement('span');
+            img.className = "myStar glyphicon glyphicon-star";
+
+            rating.appendChild(img);
+        }else{
+            var img = document.createElement('span');
+            img.className = "myStar glyphicon glyphicon-star-empty";
+            rating.appendChild(img);
+        }
+    }
+    return rating
 }

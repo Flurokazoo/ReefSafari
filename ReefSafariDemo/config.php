@@ -1,15 +1,9 @@
 <?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = '';
-$db_database = 'reeflog';
+$db_host = 'sql.hosted.hr.nl';
+$db_user = '0860995';
+$db_password = 'fcc72801';
+$db_database = '0860995';
 
 $connect = mysqli_connect($db_host, $db_user, $db_password, $db_database);
 
-function isLoggedIn()
-{
-    if (!isset($_SESSION['id'])) {
-        header('Location: login.php?error=login');
-    }
-}
 ?>

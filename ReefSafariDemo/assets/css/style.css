@@ -6,23 +6,27 @@ body {
 .header-section a:hover, #reeflog-logo a:hover {
     text-decoration: none;
 }
-
+.header-section{
+    height: 60px;
+    text-align: right;
+}
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
 }
 
 .container {
     margin-top: 50px;
+    width: 100%;
 }
 
 .name {
     margin-top: 0;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .yellow-text {
-    color: #ffd966
+    color: #ffd966;
 }
 
 .white-text {
@@ -34,7 +38,7 @@ body {
 }
 
 #settings-box, #logout-box, .header-section a {
-    font-size: 22px;
+    font-size: 20px;
     color: #ffd966;
 }
 
@@ -44,6 +48,8 @@ body {
 
 #reeflog-logo {
     font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+    width: 300px;
 }
 
 #reeflog-logo h1 {
@@ -66,7 +72,7 @@ body {
     border-radius: 20px;
 }
 
-.login-section{
+.login-section {
     margin-top: 100px;
 }
 
@@ -84,6 +90,13 @@ body {
     margin: 10px 25%;
     font-size: 17px;
 }
+
+[type=file] {
+    position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
 
 /*------------------------------------------------------------REEFLOG---------------------------------------------------------------------------------*/
 nav {
@@ -115,43 +128,69 @@ nav {
 
 .dayDiv h3 {
     padding-left: 28px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px
 }
 
 .entryDiv {
     background-color: #FFFFFF;
     color: #000000;
     border-radius: 10px;
-    height: 200px;
+    height: 230px;
     margin: 10px;
     float: left;
     padding: 0;
 }
 
 .entryDiv img {
-    height: 200px;
+    height: 230px;
     margin-bottom: 10px;
-    width: 30%;
+    width: 29%;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     float: left;
 }
+.entryDiv span{
+    float: left;
+    display: inline-block;
+    width: 51%;
+    padding: 40px;
+    font-size: 3em;
+}
 
-.entryDiv button {
+/*.entryDiv button {*/
+    /**/
+/*}*/
+.entryButton{
     width: 20%;
-    height: 200px;
+    height: 230px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 18px;
     background-color: #229f58;
     color: #FFFFFF;
-    border:  none;
+    border: none;
 }
-.entryDiv h4{
+/*DIT IS ALLEEN VOOR REVIEW PAGE \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/*/
+.entryReviewButton{
+    width: 20%;
+    height: 230px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+    background-color: #e8b22a;
+    color: #FFFFFF;
+    border: none;
+}
+/*ALLEEN REVIEW PAGE ^^^^^^^^^^^^^^^^*/
+.entryDiv h4 {
     display: block;
-    font-size: 2.5em;
+    font-size: 4.5em;
     background-color: #253f5f;
     color: #FFFFFF;
-    width: 50%;
+    width: 51%;
     float: left;
     margin: 0;
     padding: 10px 0 10px 20px;
@@ -177,25 +216,27 @@ nav {
 }
 
 #reefName {
-    width: 350px;
-    height: 100px;
+    width: 100%;
+    height: 70px;
     margin-top: 0;
     background-color: #253f5f;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
     font-size: 36px;
-    line-height: 2.5;
+    line-height: 70px;
 }
 
 .modalDescription {
-    height: 450px;
-    width: 45%;
-    margin-left: 3.2%;
+    height: 280px;
     background-color: #ffffff;
     overflow: auto;
+    text-align: center;
+}
+.modalDescription h3 {
+    margin-bot: 0;
 }
 
-.modalImg, #reefName {
+.modalImg{
     margin: 0 auto;
 }
 
@@ -229,21 +270,179 @@ nav {
 textarea {
     resize: none;
 }
+
 #modalDescriptionEdit, #modalCoralUserDescription {
-    height: 250px;
+    height: 100px;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .modal-button {
-    width: 100%;
+    width: 50%;
     margin: 5px auto;
     font-size: 20px;
 }
 
-[type=file] {
-    position: absolute;
-    filter: alpha(opacity=0);
-    opacity: 0;
+/*--------------------------------------------------------DETAIL PAGE------------------------------------------------------*/
+
+.img-dp {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.h1-dp {
+    display: block;
+    font-size: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    background-color: #253f5f;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.not-venomous-dp {
+    background-color: #8ad01a;
+    color: white;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.venomous-dp {
+    background-color: #e8b22a;
+    color: white;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.very-venomous-dp {
+    background-color: #d00a25;
+    color: white;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.span-dp {
+    color: #b9b3bb;
+    border-bottom: 1px solid black;
+    background-color: white;
+    display: block;
+    font-size: 30px;
+    height: 80px;
+    line-height: 80px;
+    width: 30%;
+    float: left;
+    padding-left: 20px;
+}
+
+.strong-dp {
+    color: black;
+    float: left;
+    width: 70%;
+    height: 80px;
+    line-height: 80px;
+    display: block;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+.container-dp {
+    float: left;
+    width: 40%;
+    margin: 2.5% 5% 0 5%;
+    border-radius: 10px;
+    background-color: #4d77aa;
+}
+
+.a-dp {
+    font-size: 40px;
+    margin: 10px auto;
+    width: 100%;
+    height: 70px;
+}
+
+.review-button {
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.btn-group{
+    width: 100%;
+}
+
+.wrong-coral{
+    font-size: 25px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+#reviewModal {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.coralbtn {
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+}
+.ratingDivContainer{
+    height: 100%;
+    font-size: 25px;
+    color: #ffaf1e;
+}
+.ratingDivContainerPadding{
+    padding-top: 25px;
+}
+#status-box{
+    color: white;
+    margin: 0 auto;
+    display: block;
+    text-align:  center;
+
+}
+
+#modalCoralVenomous{
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+#deleteButton {
+    margin-top: 30px;
+}
+
+.saveButton {
+    margin-bottom: 0
+}
+
+.loginForm{
+    height: 60px;
+}
+
+.loginFormLabel {
+    font-size: 36px;
 }
 
 

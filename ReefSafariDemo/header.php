@@ -1,15 +1,5 @@
 <?php
 require_once "config.php";
-
-
-
-$query = "SELECT firstName, lastName, avatar FROM user WHERE id = 1";
-$results = mysqli_query($connect, $query);
-$user = mysqli_fetch_assoc($results);
-
-$currentPage = basename($_SERVER['PHP_SELF']);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -24,20 +14,14 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <body>
 <div class="container">
     <section class="header-section">
-        <div class="col-lg-6">
-        </div>
-        <div class="col-lg-6">
-            <div class="col-sm-2">
-                <img class="avatar" src="<?= $user['avatar'] ?>"
-                     alt="avatar">
-            </div>
-            <div class="col-sm-10 user-options">
-                <h2 class="name white-text"><?= $user['firstName'] . " " . $user['lastName'] ?></h2>
-            </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <h2 class="name white-text">ReefSafari Demo</h2>
+
 
         </div>
     </section>
-</body>
-</html>
+
 
 

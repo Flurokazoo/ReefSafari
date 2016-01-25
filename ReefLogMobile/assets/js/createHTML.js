@@ -168,6 +168,11 @@ function createReviewEntryHTML(data) {
     $(entryButton).attr("data-entryid", data.id);
     entryButton.innerHTML = "Edit";
 
+    $(entryButton).on("click", function(){
+        $(".id-form-review").val($(entryButton).data("entryid"));
+        $('#reviewModal').modal("show");
+    });
+
     entryDiv.appendChild(entryPicture);
     entryDiv.appendChild(entryTitle);
     entryDiv.appendChild(entryButton);

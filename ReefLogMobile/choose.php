@@ -3,7 +3,6 @@ require_once "header.php";
 isLoggedIn();
 $query = "SELECT status FROM `entry` WHERE `userid`=" . $_SESSION['id'] . " AND `status`=0";
 $results = mysqli_query($connect, $query);
-echo $query;
 $resultArray = [];
 while ($row = mysqli_fetch_assoc($results)) {
     $resultArray[] = $row;

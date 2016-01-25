@@ -148,7 +148,10 @@ nav {
     float: left;
 }
 
-.entryDiv button {
+/*.entryDiv button {*/
+    /**/
+/*}*/
+.entryButton{
     width: 20%;
     height: 230px;
     border-bottom-right-radius: 10px;
@@ -165,7 +168,7 @@ nav {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 18px;
-    background-color: #ffd966;
+    background-color: #e8b22a;
     color: #FFFFFF;
     border: none;
 }

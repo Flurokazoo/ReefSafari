@@ -258,9 +258,9 @@ function checkType(image){
 
         }
     }
-    for(var i = 0; i < pixelData.length; i ++){
-        //console.log("R " + pixelData[i][0] + " G " + pixelData[i][1] + " B " + pixelData[i][2] + " A " + pixelData[i][3]);
-    }
+    //for(var i = 0; i < pixelData.length; i ++){
+    //    console.log("R " + pixelData[i][0] + " G " + pixelData[i][1] + " B " + pixelData[i][2] + " A " + pixelData[i][3]);
+    //}
     var foundColors = [0,0,0,0,0,0];
 
 
@@ -294,11 +294,6 @@ function checkType(image){
     console.log("Aantal Rode Pixels: "+ foundColors[3]);
     console.log("Aantal Groene Pixels: "+ foundColors[4]);
     console.log("Aantal Blauwe Pixels: "+ foundColors[5]);
-    //console.log("Aantal Gele Pixels: "+ foundColors[6]);
-    //console.log("Aantal Cyane Pixels: "+ foundColors[7]);
-    //console.log("Aantal Paarse Pixels: "+ foundColors[8]);
-
-
 
     if(foundColors[1] + foundColors[2] > (amountDots * amountDots) * maxAmountWhite){
         appendResult("Er is geen spons gevonden, Probeer opnieuw");
@@ -344,10 +339,7 @@ function getCroppedImage(img){
         saveCanvas.getContext('2d').drawImage(img, 0, img.height / 2 - img.width / 2,
             img.width, img.width, 0,0,saveCanvas.width, saveCanvas.height);
     }
-    //saveCanvas.getContext('2d').drawImage(img, img.width / 2 - saveCanvas.width / 2, 0,
-        //saveCanvas.width, saveCanvas.height);
 
-    //console.log(saveCanvas.toDataURL());
     return saveCanvas;
 }
 function getCroppedThumbnail(canvas){
@@ -357,7 +349,6 @@ function getCroppedThumbnail(canvas){
 
     saveCanvasThumbnail.getContext('2d').drawImage(canvas, 0, 0, saveCanvasThumbnail.width, saveCanvasThumbnail.height);
 
-    //console.log(saveCanvasThumbnail.toDataURL());
     return saveCanvasThumbnail;
 }
 function checkColor(color) {

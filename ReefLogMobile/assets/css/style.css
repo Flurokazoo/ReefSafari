@@ -211,23 +211,23 @@ nav {
 }
 
 #reefName {
-    width: 350px;
-    height: 100px;
+    width: 100%;
+    height: 70px;
     margin-top: 0;
     background-color: #253f5f;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
     font-size: 36px;
-    line-height: 2.5;
+    line-height: 70px;
 }
 
 .modalDescription {
-    height: 450px;
+    height: 280px;
     background-color: #ffffff;
     overflow: auto;
 }
 
-.modalImg, #reefName {
+.modalImg{
     margin: 0 auto;
 }
 

@@ -15,11 +15,12 @@ isLoggedIn();
                 <div class="col-sm-5">
                     <img class="modalImg" id="modalCoralAvatar" src="">
 
+
+                </div>
+                <div class="col-sm-7">
                     <div id="reefName" class="white-text text-center">
                         <span id="modalCoralName"></span>
                     </div>
-                </div>
-                <div class="col-sm-7">
                     <div class="col-sm-12 modalDescription">
                         <h3>Rarity</h3>
 

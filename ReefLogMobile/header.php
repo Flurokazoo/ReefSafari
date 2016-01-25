@@ -24,15 +24,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <div class="container">
     <section class="header-section">
         <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <h2 class="name white-text"><?= $user['firstName'] . " " . $user['lastName'] ?></h2>
-                <span class="yellow-text" id="settings-box"><span class="glyphicon glyphicon-cog"
-                                                                  aria-hidden="true"></span><span
-                        class="settings-box-glyphicon"><a href="settings.php"
-                                                          class="settings">Settings</a></span></span>
 
             <?php if ($currentPage != "menu.php") { ?>
-                <span class="yellow-text" id="settings-box"><span class="glyphicon glyphicon-camera"
+                <span class="yellow-text" id="settings-box"><span class="glyphicon glyphicon-home"
                                                                   aria-hidden="true"></span><span
                         class="settings-box-glyphicon"><a href="menu.php"
                                                           class="settings">Go to Menu</a></span></span>
@@ -43,28 +40,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     class="settings-box-glyphicon"><a href="logout.php"
                                                       class="">Logout</a></span></span>
         </div>
-<!--        <div class="col-lg-6">-->
-<!--            <div class="col-sm-10 user-options">-->
-<!--                <h2 class="name white-text">--><?//= $user['firstName'] . " " . $user['lastName'] ?><!--</h2>-->
-<!--                <span class="yellow-text" id="settings-box"><span class="glyphicon glyphicon-cog"-->
-<!--                                                                  aria-hidden="true"></span><span-->
-<!--                        class="settings-box-glyphicon"><a href="settings.php"-->
-<!--                                                          class="settings">Settings</a></span></span>-->
-<!---->
-<!--                --><?php //if ($currentPage != "menu.php") { ?>
-<!--                    <span class="yellow-text" id="settings-box"><span class="glyphicon glyphicon-camera"-->
-<!--                                                                      aria-hidden="true"></span><span-->
-<!--                            class="settings-box-glyphicon"><a href="menu.php"-->
-<!--                                                              class="settings">Go to Menu</a></span></span>-->
-<!--                --><?php //} ?>
-<!---->
-<!--                <span class="yellow-text" id="logout-box"><span class="glyphicon glyphicon-log-out"-->
-<!--                                                                aria-hidden="true"></span><span-->
-<!--                        class="settings-box-glyphicon"><a href="logout.php"-->
-<!--                                                          class="">Logout</a></span></span>-->
-<!--            </div>-->
-
-<!--        </div>-->
     </section>
 
 

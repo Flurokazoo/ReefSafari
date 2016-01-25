@@ -8,6 +8,7 @@ body {
 }
 .header-section{
     height: 60px;
+    text-align: right;
 }
 .avatar {
     width: 125px;
@@ -21,11 +22,11 @@ body {
 
 .name {
     margin-top: 0;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .yellow-text {
-    color: #ffd966
+    color: #ffd966;
 }
 
 .white-text {
@@ -37,7 +38,7 @@ body {
 }
 
 #settings-box, #logout-box, .header-section a {
-    font-size: 25px;
+    font-size: 20px;
     color: #ffd966;
 }
 
@@ -47,6 +48,8 @@ body {
 
 #reeflog-logo {
     font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+    width: 300px;
 }
 
 #reeflog-logo h1 {
@@ -128,7 +131,7 @@ nav {
     background-color: white;
     border-radius: 20px;
     padding-top: 5px;
-    paading-bottom: 5px
+    padding-bottom: 5px
 }
 
 .entryDiv {
@@ -231,6 +234,7 @@ nav {
 .modalDescription h3 {
     margin-bot: 0;
 }
+
 .modalImg{
     margin: 0 auto;
 }
@@ -412,6 +416,9 @@ textarea {
 }
 #status-box{
     color: white;
+    margin: 0 auto;
+    display: block;
+    text-align:  center;
 
 }
 

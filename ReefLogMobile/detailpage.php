@@ -42,10 +42,10 @@ while ($row = mysqli_fetch_assoc($coralTypeResults)) {
     <div class="strong-dp"><?= $row['rarity']?></div>
 <?php } ?>
 
-    <form method="post" action="setStatus.php">
+    <form class="saveForm" method="post" action="setStatus.php">
         <input name="setType" type="hidden" value="save">
         <input name="id" type="hidden" value="<?= $id ?>">
-        <input type="submit" value="Save to ReefLog" class="a-dp btn btn-success">
+        <input type="submit" value="Save to ReefLog" class=" saveButton a-dp btn btn-success">
     </form>
 
     <span class="white-text wrong-coral">Is this coral tagged wrongly?</span>

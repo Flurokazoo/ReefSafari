@@ -80,11 +80,11 @@ mysqli_close($connect);
         <div id="login-container" class="col-lg-8">
             <form action="" method="post" class="col-md-6 .col-md-offset-3">
                 <?= $error ?>
-                    <label for="email" class="white-text">E-Mail:</label>
-                    <input type="email" name="email" id="email" class="form-control border"/>
+                    <label for="email" class="white-text loginFormLabel">E-Mail:</label>
+                    <input type="email" name="email" id="email" class="loginForm form-control border"/>
                 <br>
-                    <label for="password" class="white-text">Password:</label>
-                    <input type="password" name="password" id="password" class="form-control border"/>
+                    <label for="password" class="white-text loginFormLabel">Password:</label>
+                    <input type="password" name="password" id="password" class="loginForm form-control border"/>
 
                 <input type="submit" name="login" value="Login" class="btn btn-success login border"/>
             </form>

@@ -49,8 +49,8 @@ function getEntries(data) {
 }
 
 function editEntryDescription() {
-    $('#modalDescriptionEdit').val($("#modalCoralUserDescription").text());
-    toggleModalEdit();
+    //$('#modalDescriptionEdit').val($("#modalCoralUserDescription").text());
+    //toggleModalEdit();
 }
 
 function hideShow() {
@@ -117,7 +117,7 @@ function showModel(coralEntry) {
 
     $("#modalCoralName").text(coralEntry[0].name);
     $("#modalCoralInformation").text(coralEntry[0].coralDescription);
-    $("#modalCoralUserDescription").text(coralEntry[0].description);
+    //$("#modalCoralUserDescription").text(coralEntry[0].description);
     $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
     $("#modalCoralRarity").text(rarityNames[coralEntry[0].rarity - 1]);
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
@@ -125,13 +125,13 @@ function showModel(coralEntry) {
 
 }
 function toggleModalEdit() {
-    $("#modalCoralUserDescription").toggle();
+    //$("#modalCoralUserDescription").toggle();
     $("#modalDescriptionEdit").toggle();
     $("#saveButton").toggle();
     $("#editButton").toggle();
 }
 function resetModal() {
-    $("#modalCoralUserDescription").show();
+    //$("#modalCoralUserDescription").show();
     $("#modalDescriptionEdit").hide();
 
     $("#saveButton").hide();
@@ -139,7 +139,7 @@ function resetModal() {
 }
 function saveEntry() {
     var description = $('#modalDescriptionEdit').val();
-    $("#modalCoralUserDescription").text(description);
+    //$("#modalCoralUserDescription").text(description);
 
     $.ajax({
         dataType: "json",

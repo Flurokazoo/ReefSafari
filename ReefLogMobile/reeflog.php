@@ -20,12 +20,7 @@ isLoggedIn();
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <div class="col-sm-6 modalDescription">
-                        <h3>About this coral</h3>
-
-                        <p id="modalCoralInformation">
-                        </p>
-
+                    <div class="col-sm-12 modalDescription">
                         <h3>Rarity</h3>
 
                         <p id="modalCoralRarity">
@@ -34,17 +29,11 @@ isLoggedIn();
 
                         <p id="modalCoralVenomous">
 
-                    </div>
-                    <div class="col-sm-6 modalDescription">
-                        <h3>Personal description</h3>
+
 
                         <p id="modalCoralUserDescription"></p>
 
-                        <form>
-                            <textarea type="text" id="modalDescriptionEdit"></textarea>
-                        </form>
-                        <button class="border modal-button btn btn-default btn-success" id="editButton" type="submit">Edit</button>
-                        <button class="border modal-button btn btn-default btn-success" id="saveButton" type="submit">Save</button>
+
                         <button class="border modal-button btn btn-default btn-danger" id="deleteButton" type="submit">Delete</button>
                     </div>
                 </div>

@@ -216,8 +216,6 @@ nav {
 
 .modalDescription {
     height: 450px;
-    width: 45%;
-    margin-left: 3.2%;
     background-color: #ffffff;
     overflow: auto;
 }
@@ -258,8 +256,10 @@ textarea {
 }
 
 #modalDescriptionEdit, #modalCoralUserDescription {
-    height: 250px;
+    height: 100px;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .modal-button {

@@ -36,6 +36,7 @@ function createEntryHTML(data) {
 
     entryDiv.appendChild(entryPicture);
     entryDiv.appendChild(entryTitle);
+    entryDiv.appendChild(entryTime);
     entryDiv.appendChild(entryButton);
 
     return entryDiv;
@@ -164,6 +165,8 @@ function createReviewEntryHTML(data) {
     var entryPicture = document.createElement('img');
     entryPicture.src = data.avatarThumbnail;
     entryPicture.className = "";
+    var entryTime = document.createElement('span');
+    entryTime.innerHTML = data.time;
     var entryButton = document.createElement('button');
     entryButton.href = "index.php";
     entryButton.className = "entryReviewButton";
@@ -177,6 +180,7 @@ function createReviewEntryHTML(data) {
 
     entryDiv.appendChild(entryPicture);
     entryDiv.appendChild(entryTitle);
+    entryDiv.appendChild(entryTime);
     entryDiv.appendChild(entryButton);
 
     return entryDiv;

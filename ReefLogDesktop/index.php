@@ -21,7 +21,7 @@ isLoggedIn();
                 </div>
                 <div class="col-lg-7">
                     <div class="col-lg-6 modalDescription">
-                        <h3>Habitat</h3>
+                        <h3>Description</h3>
 
                         <p id="modalCoralInformation">
                         </p>

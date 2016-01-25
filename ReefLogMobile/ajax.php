@@ -6,7 +6,7 @@ $userId = $_SESSION['id'];
 
 switch ($action) {
     case 'getEntries':
-        $query = "SELECT `name`, `entry`.id, `year`, `month`, `day`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 1 ORDER BY `entry`.id DESC;";
+        $query = "SELECT `name`, `entry`.id, `year`, `month`, `day`, `time`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 1 ORDER BY `entry`.id DESC;";
         getQuery($query, $connect);
         break;
     case 'searchEntries':
@@ -14,10 +14,10 @@ switch ($action) {
         $hashTagSearch = '#';
         if ($searchTerm[0] == $hashTagSearch) {
             //Hashtag search
-            $query = "SELECT `name`, `entry`.id, `coralId`, `year`, `month`, `day`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 1 AND `description` LIKE '%" . $searchTerm . "%'  ORDER BY `entry`.id DESC;";
+            $query = "SELECT `name`, `entry`.id, `coralId`, `year`, `month`, `day`, `time`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 1 AND `description` LIKE '%" . $searchTerm . "%'  ORDER BY `entry`.id DESC;";
         } else {
             //Coral search
-            $query = "SELECT `name`, `entry`.id, `coralId`, `year`, `month`, `day`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 1 AND `name` LIKE '%" . $searchTerm . "%'  ORDER BY `entry`.id DESC;";
+            $query = "SELECT `name`, `entry`.id, `coralId`, `year`, `month`, `day`, `time`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 1 AND `name` LIKE '%" . $searchTerm . "%'  ORDER BY `entry`.id DESC;";
         }
         getQuery($query, $connect);
         break;
@@ -40,7 +40,7 @@ switch ($action) {
         echo json_encode(["Delete success"]);
         break;
     case 'getReviewEntries':
-        $query = "SELECT `name`, `entry`.id, `year`, `month`, `day`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 0 ORDER BY `entry`.id DESC;";
+        $query = "SELECT `name`, `entry`.id, `year`, `month`, `day`, `time`, `avatarThumbnail` FROM `entry` INNER JOIN `coral` ON `entry`.coralId =`coral`.id WHERE `userId` = " . $userId . " AND `status` = 0 ORDER BY `entry`.id DESC;";
         getQuery($query, $connect);
         break;
 }

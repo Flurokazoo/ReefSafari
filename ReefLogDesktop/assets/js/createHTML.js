@@ -24,7 +24,7 @@ function createEntryHTML(data) {
     var entryTitle = document.createElement('h4');
     entryTitle.innerHTML = data.name;
     var entryPicture = document.createElement('img');
-    entryPicture.src = data.avatar;
+    entryPicture.src = data.avatarThumbnail;
     entryPicture.className = "img-rounded";
     var entryButton = document.createElement('button');
     entryButton.href = "index.php";

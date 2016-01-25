@@ -85,7 +85,7 @@ function getEntryData() {
 function showModel(coralEntry) {
 
     $("#modalCoralName").text(coralEntry[0].name);
-    $("#modalCoralInformation").text(coralEntry[0].habitat);
+    $("#modalCoralInformation").text(coralEntry[0].coralDescription);
     $("#modalCoralUserDescription").text(coralEntry[0].description);
     $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
     $("#modalCoralRarity").text(rarityNames[coralEntry[0].rarity - 1]);
@@ -167,12 +167,12 @@ function updateNav() {
         for (var j = 12; j > 0; j--) {
             var amount = 0;
             $.each(allEntries, function (k, element) {
-                if (element.month - 1 == j && element.year == i) {
+                if (element.month == j && element.year == i) {
                     amount++;
                 }
             });
             if (!amount <= 0) {
-                var monthA = $('<a>').attr("href", "#" + monthNames[j] + i).text(monthNames[j] + "(" + amount + ")");
+                var monthA = $('<a>').attr("href", "#" + monthNames[j-1] + i).text(monthNames[j-1] + "(" + amount + ")");
                 var monthLi = $('<li>').addClass("monthLi");
                 monthLi.append(monthA);
                 yearUl.append(monthLi);
@@ -182,5 +182,4 @@ function updateNav() {
         yearA.text(i + "(" + yearAmount + ")");
         navList.append(yearUl);
     }
-
 }

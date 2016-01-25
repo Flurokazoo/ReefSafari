@@ -6,8 +6,8 @@ $type = $_POST['type'];
 session_start();
 $userId = $_SESSION['id'];
 $year = date("Y");
-$month = date("m");
-$day = date("d");
+$month = date("n");
+$day = date("j");
 $time = date("G:i");
 
 $query = "INSERT INTO `entry` (`userId`, `status`, coralId, `year`, `month`, `day`, `time`, `avatar`, `avatarThumbnail`) VALUES ('" .$userId. "', 0, '" .$type. "', '" .$year. "', '" .$month. "', '" .$day. "', '" .$time. "', '" .$croppedImage. "', '" .$thumbnail. "')";

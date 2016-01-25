@@ -23,16 +23,11 @@ isLoggedIn();
                     <div class="col-sm-12 modalDescription">
                         <h3>Rarity</h3>
 
-                        <p id="modalCoralRarity">
+                        <div id="modalCoralRarity"></div>
 
                         <h3>Venomous</h3>
 
-                        <p id="modalCoralVenomous">
-
-
-
-                        <p id="modalCoralUserDescription"></p>
-
+                        <p id="modalCoralVenomous"></p>
 
                         <button class="border modal-button btn btn-default btn-danger" id="deleteButton" type="submit">Delete</button>
                     </div>

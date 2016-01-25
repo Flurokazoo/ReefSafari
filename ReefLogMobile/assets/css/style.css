@@ -147,6 +147,13 @@ nav {
     border-top-left-radius: 10px;
     float: left;
 }
+.entryDiv span{
+    float: left;
+    display: inline-block;
+    width: 51%;
+    padding: 40px;
+    font-size: 3em;
+}
 
 /*.entryDiv button {*/
     /**/

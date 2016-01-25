@@ -45,7 +45,7 @@ function getEntries(data) {
     $('#saveButton').on('click', saveEntry).hide();
     $('#deleteButton').on('click', deleteEntry);
     $('#detailsModal').on('hidden.bs.modal', resetModal);
-    $("#modalDescriptionEdit").hide();
+    //$("#modalDescriptionEdit").hide();
 }
 
 function editEntryDescription() {
@@ -116,29 +116,29 @@ function getEntryData() {
 function showModel(coralEntry) {
 
     $("#modalCoralName").text(coralEntry[0].name);
-    $("#modalCoralInformation").text(coralEntry[0].coralDescription);
+    //$("#modalCoralInformation").text(coralEntry[0].coralDescription);
     //$("#modalCoralUserDescription").text(coralEntry[0].description);
     $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
-    $("#modalCoralRarity").text(rarityNames[coralEntry[0].rarity - 1]);
+    $("#modalCoralRarity").html(createRating(coralEntry[0].rarity - 1, 10));
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
     $('#detailsModal').modal("show");
 
 }
 function toggleModalEdit() {
     //$("#modalCoralUserDescription").toggle();
-    $("#modalDescriptionEdit").toggle();
+    //$("#modalDescriptionEdit").toggle();
     $("#saveButton").toggle();
     $("#editButton").toggle();
 }
 function resetModal() {
     //$("#modalCoralUserDescription").show();
-    $("#modalDescriptionEdit").hide();
+    //$("#modalDescriptionEdit").hide();
 
     $("#saveButton").hide();
     $("#editButton").show();
 }
 function saveEntry() {
-    var description = $('#modalDescriptionEdit').val();
+    //var description = $('#modalDescriptionEdit').val();
     //$("#modalCoralUserDescription").text(description);
 
     $.ajax({
@@ -394,5 +394,22 @@ function checkColor(color) {
 
 function appendResult(result) {
     $("#result").empty().append($( "<h2>" + result + "</h2>"));
+}
+function createRating(given, max){
+    var rating = document.createElement('div');
+
+    for(var i = 0; i < max; i ++){
+        if(i <= given){
+            var img = document.createElement('span');
+            img.className = "myStar glyphicon glyphicon-star"
+
+            rating.appendChild(img);
+        }else{
+            var img = document.createElement('span');
+            img.className = "myStar glyphicon glyphicon-star-empty"
+            rating.appendChild(img);
+        }
+    }
+    return rating
 }
 

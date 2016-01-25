@@ -15,24 +15,12 @@ if (count($resultArray) > 0) {
 }
 
 ?>
-
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500italic,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>ReefSafari</title>
-</head>
-<body>
-
-<section class="header-section">
-    <div id="reeflog-logo" class="col-lg-6">
-        <h1><span class="yellow-text">Reef</span><span
-                class="white-text italic-text">Safari</span></h1>
-    </div>
-</section>
+<div class="col-sm-4"></div>
+<!--<div class="col-sm-4"></div>-->
+<div id="reeflog-logo" class="col-sm-4">
+    <h1><span class="yellow-text">Reef</span><span
+            class="white-text italic-text">Safari</span></h1>
+</div>
 <section class="body-section">
     <input type="file" id="take-picture" accept="image/jpeg" class="btn btn-success login border" placeholder="Upload/Take a picture">
     <label for="take-picture" class="btn btn-success login border">Upload/Take a Picture </label>
@@ -42,6 +30,7 @@ if (count($resultArray) > 0) {
         <a href="review.php" class="btn btn-success login border">View Revlog</a>
     <?php } ?>
 <!--    <img src="about:blank" alt="" id="show-picture">-->
+    <p id="status-box"></p>
 </section>
 
 <?php require_once "footer.php" ?>

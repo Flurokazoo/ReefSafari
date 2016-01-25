@@ -6,7 +6,9 @@ body {
 .header-section a:hover, #reeflog-logo a:hover {
     text-decoration: none;
 }
-
+.header-section{
+    height: 60px;
+}
 .avatar {
     width: 125px;
     height: 125px;
@@ -407,6 +409,10 @@ textarea {
 }
 .ratingDivContainerPadding{
     padding-top: 25px;
+}
+#status-box{
+    color: white;
+
 }
 
 

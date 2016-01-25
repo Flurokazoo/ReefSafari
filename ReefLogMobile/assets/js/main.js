@@ -299,13 +299,14 @@ function checkType(image){
     console.log("Aantal Blauwe Pixels: "+ foundColors[5]);
 
     if(foundColors[1] + foundColors[2] > (amountDots * amountDots) * maxAmountWhite){
-        appendResult("Er is geen spons gevonden, Probeer opnieuw");
+        appendResult("We couldn't detect a coral, please try again.");
     }
     else if(foundColors[1] + foundColors[2] < (amountDots * amountDots) * minAmountWhite){
-        appendResult("Maak de foto op een witte achtergrond");
+        appendResult("We couldn't detect a coral, please try again. Please make the photo with a white background.");
     }
     else{
-        appendResult("deze spons is " + checkableColors[highestIndex]);
+        //appendResult("deze spons is " + checkableColors[highestIndex]);
+        appendResult("Scanning... Please wait");
         saveEntryToDB(image, highestIndex)
     }
 
@@ -396,7 +397,7 @@ function checkColor(color) {
 }
 
 function appendResult(result) {
-    $("#result").empty().append($( "<h2>" + result + "</h2>"));
+    $("#status-box").empty().append($( "<h2>" + result + "</h2>"));
 }
 function createRating(given, max, className){
     var rating = document.createElement('div');

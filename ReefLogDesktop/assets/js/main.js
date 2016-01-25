@@ -87,8 +87,8 @@ function showModel(coralEntry) {
     $("#modalCoralName").text(coralEntry[0].name);
     $("#modalCoralInformation").text(coralEntry[0].coralDescription);
     $("#modalCoralUserDescription").text(coralEntry[0].description);
-    $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
     $("#modalCoralRarity").html(createRating(coralEntry[0].rarity - 1, 10, "ratingDivContainer"));
+    $("#modalCoralRarityText").text("This coral is: " + rarityNames[coralEntry[0].rarity - 1]);
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
 }
 function toggleModalEdit() {

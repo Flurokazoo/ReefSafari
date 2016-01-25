@@ -21,18 +21,15 @@ isLoggedIn();
                 </div>
                 <div class="col-lg-7">
                     <div class="col-lg-6 modalDescription">
-                        <h3>Description</h3>
-
-                        <p id="modalCoralInformation">
-                        </p>
-
                         <h3>Rarity</h3>
 
                         <div id="modalCoralRarity"></div>
+                        <p id="modalCoralRarityText"></p>
 
-                        <h3>Venomous</h3>
+                        <h3>Description</h3>
 
-                        <p id="modalCoralVenomous">
+                        <p id="modalCoralInformation"></p>
+
 
                     </div>
                     <div class="col-lg-6 modalDescription">
@@ -43,9 +40,15 @@ isLoggedIn();
                         <form>
                             <textarea type="text" id="modalDescriptionEdit"></textarea>
                         </form>
-                        <button class="border modal-button btn btn-default btn-success" id="editButton" type="submit">Edit</button>
-                        <button class="border modal-button btn btn-default btn-success" id="saveButton" type="submit">Save</button>
-                        <button class="border modal-button btn btn-default btn-danger" id="deleteButton" type="submit">Delete</button>
+                        <button class="border modal-button btn btn-default btn-success" id="editButton" type="submit">
+                            Edit
+                        </button>
+                        <button class="border modal-button btn btn-default btn-success" id="saveButton" type="submit">
+                            Save
+                        </button>
+                        <button class="border modal-button btn btn-default btn-danger" id="deleteButton" type="submit">
+                            Delete
+                        </button>
                     </div>
                 </div>
                 <div class="modal-footer">

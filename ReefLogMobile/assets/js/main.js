@@ -119,7 +119,7 @@ function showModel(coralEntry) {
     //$("#modalCoralInformation").text(coralEntry[0].coralDescription);
     //$("#modalCoralUserDescription").text(coralEntry[0].description);
     $("#modalCoralVenomous").text(venomousNames[coralEntry[0].venomous]);
-    $("#modalCoralRarity").html(createRating(coralEntry[0].rarity - 1, 10));
+    $("#modalCoralRarity").html(createRating(coralEntry[0].rarity - 1, 10, "ratingDivContainer"));
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
     $('#detailsModal').modal("show");
 
@@ -183,13 +183,16 @@ function deleteCurrentHTML() {
 function getFileFromCamera() {
 
     (function () {
-        var takePicture = document.querySelector("#take-picture"),
-            showPicture = document.querySelector("#show-picture");
+        var takePicture = document.querySelector("#take-picture");
+        //var showPicture = document.querySelector("#show-picture");
 
-        if (takePicture && showPicture) {
+        if (takePicture) {
             // Set events
-            takePicture.onchange = function (event) {
-                // Get a reference to the taken picture or chosen file
+            takePicture.onchange = function () {
+
+                var tempImg = document.createElement('img');
+
+                //// Get a reference to the taken picture or chosen file
                 var files = event.target.files,
                     file;
                 if (files && files.length > 0) {
@@ -201,13 +204,13 @@ function getFileFromCamera() {
                         // Create ObjectURL
                         var imgURL = URL.createObjectURL(file);
 
-                        // Set img src to ObjectURL
-                        showPicture.src = imgURL;
+                         //Set img src to ObjectURL
+                        tempImg.src = imgURL;
 
                         // Revoke ObjectURL after imagehas loaded
-                        showPicture.onload = function() {
+                        tempImg.onload = function() {
                             URL.revokeObjectURL(imgURL);
-                            checkType(showPicture);
+                            checkType(tempImg);
                         };
 
                     }
@@ -216,7 +219,7 @@ function getFileFromCamera() {
                             // Fallback if createObjectURL is not supported
                             var fileReader = new FileReader();
                             fileReader.onload = function (event) {
-                                showPicture.src = event.target.result;
+                                tempImg.src = event.target.result;
                             };
                             fileReader.readAsDataURL(file);
                         }
@@ -395,18 +398,19 @@ function checkColor(color) {
 function appendResult(result) {
     $("#result").empty().append($( "<h2>" + result + "</h2>"));
 }
-function createRating(given, max){
+function createRating(given, max, className){
     var rating = document.createElement('div');
+    rating.className = className;
 
     for(var i = 0; i < max; i ++){
         if(i <= given){
             var img = document.createElement('span');
-            img.className = "myStar glyphicon glyphicon-star"
+            img.className = "myStar glyphicon glyphicon-star";
 
             rating.appendChild(img);
         }else{
             var img = document.createElement('span');
-            img.className = "myStar glyphicon glyphicon-star-empty"
+            img.className = "myStar glyphicon glyphicon-star-empty";
             rating.appendChild(img);
         }
     }

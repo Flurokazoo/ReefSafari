@@ -39,10 +39,8 @@ while ($row = mysqli_fetch_assoc($coralTypeResults)) {
         <span class="not-venomous-dp">Not Venomous</span>
     <?php }; ?>
     <span class="span-dp">Rarity:</span>
-    <strong class="strong-dp"><?= $row['rarity'];
-} ?></strong>
-    <span class="span-dp"></span>
-    <strong class="strong-dp"></strong>
+    <div class="strong-dp"><?= $row['rarity']?></div>
+<?php } ?>
 
     <form method="post" action="setStatus.php">
         <input name="setType" type="hidden" value="save">

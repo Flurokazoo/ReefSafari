@@ -3,7 +3,7 @@ require_once "config.php";
 session_start();
 
 if(isset($_SESSION['id'])){
-    header("Location: choose.php");
+    header("Location: menu.php");
 }
 
 if (isset($_POST['login'])) {
@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
         $id = mysqli_fetch_assoc($results);
         $userId = $id['id'];
         $_SESSION['id'] = $userId;
-        header('location: choose.php');
+        header('location: menu.php');
         exit;
     }
 }

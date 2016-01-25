@@ -226,7 +226,9 @@ nav {
     background-color: #ffffff;
     overflow: auto;
 }
-
+.modalDescription h3 {
+    margin-bot: 0;
+}
 .modalImg{
     margin: 0 auto;
 }
@@ -341,7 +343,7 @@ textarea {
     font-size: 30px;
     height: 80px;
     line-height: 80px;
-    width: 50%;
+    width: 30%;
     float: left;
     padding-left: 20px;
 }
@@ -349,15 +351,13 @@ textarea {
 .strong-dp {
     color: black;
     float: left;
-    width: 50%;
-    font-size: 30px;
+    width: 70%;
     height: 80px;
     line-height: 80px;
     display: block;
     border-bottom: 1px solid black;
     background-color: white;
 }
-
 .container-dp {
     float: left;
     width: 40%;
@@ -400,6 +400,13 @@ textarea {
     height: 50px;
     font-size: 25px;
     color: white;
+}
+.ratingDivContainer{
+    height: 100%;
+    font-size: 25px;
+}
+.ratingDivContainerPadding{
+    padding-top: 25px;
 }
 
 

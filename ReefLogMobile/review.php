@@ -10,7 +10,7 @@ while ($row = mysqli_fetch_assoc($results)) {
 }
 
 if (count($checkArray) <= 0) {
-    header("Location: choose.php");
+    header("Location: menu.php");
 }
 
 

@@ -23,7 +23,7 @@ if (isset($_POST['register'])) {
         $id = mysqli_fetch_assoc($results);
         $userId = $id['id'];
         $_SESSION['id'] = $userId;
-        header('location: choose.php');
+        header('location: menu.php');
         exit;
     }
 }

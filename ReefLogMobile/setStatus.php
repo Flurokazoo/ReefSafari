@@ -10,4 +10,4 @@ if ($status == "save"){
     $query = "UPDATE `entry` SET `status` = 1, `coralId` = ".$coralType."  WHERE `id` = " . $id;
 }
 $results = mysqli_query($connect, $query);
-header("Location: choose.php");
+header("Location: menu.php");

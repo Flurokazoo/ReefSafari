@@ -90,6 +90,7 @@ function showModel(coralEntry) {
     $("#modalCoralRarity").html(createRating(coralEntry[0].rarity - 1, 10, "ratingDivContainer"));
     $("#modalCoralRarityText").text("This coral is: " + rarityNames[coralEntry[0].rarity - 1]);
     $("#modalCoralAvatar").attr("src", coralEntry[0].avatar);
+    $('#detailsModal').modal("show");
 }
 function toggleModalEdit() {
     $("#modalCoralUserDescription").toggle();

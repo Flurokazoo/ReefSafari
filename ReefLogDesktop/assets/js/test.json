@@ -1,0 +1,27 @@
+{
+  "Events": [
+    {
+      "EventDateTime":{
+        "Start": 2015,
+        "End": 2015
+      },
+      "EventName": "Nieuwjaar",
+      "Location": null,
+      "Participants":{
+        "-invited": false,
+        "#value": 0
+      }
+    },
+    {
+      "EventDateTime":{
+        "Start": 2015,
+        "End": 2015
+      },
+      "EventName": "Weer naar school",
+      "Location": "Wijnhaven 99",
+      "Participants":{
+
+      }
+    }
+  ]
+}
